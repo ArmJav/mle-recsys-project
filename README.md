@@ -5,7 +5,7 @@
 Склонируйте репозиторий проекта:
 
 ```
-git clone https://github.com/yandex-praktikum/mle-project-sprint-4-v001.git
+git clone https://github.com/ArmJav/mle-recsys-project.git
 ```
 
 ## Активируйте виртуальное окружение
