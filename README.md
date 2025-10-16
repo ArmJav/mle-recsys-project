@@ -47,14 +47,6 @@ wget https://storage.yandexcloud.net/mle-data/ym/catalog_names.parquet
 wget https://storage.yandexcloud.net/mle-data/ym/interactions.parquet
 ```
 
-## Запустите Jupyter Lab
-
-Запустите Jupyter Lab в командной строке
-
-```
-jupyter lab --ip=0.0.0.0 --no-browser
-```
-
 # Расчёт рекомендаций
 
 Код для выполнения первой части проекта находится в файле `recommendations.ipynb`. Изначально, это шаблон. Используйте его для выполнения первой части проекта.
@@ -62,11 +54,22 @@ jupyter lab --ip=0.0.0.0 --no-browser
 # Сервис рекомендаций
 
 Код сервиса рекомендаций находится в файле `recommendations_service.py`.
+Выпаолните запуск отдельных сервисов в разных терминалах
 
-<*укажите здесь необходимые шаги для запуска сервиса рекомендаций*>
+```
+uvicorn recommendation_service:app --port 8000
+```
+
+```
+uvicorn events_service:app --port 8020
+```
+
+```
+uvicorn features_service:app --port 8010
+```
+
 
 # Инструкции для тестирования сервиса
 
 Код для тестирования сервиса находится в файле `test_service.py`.
-
-<*укажите здесь необходимые шаги для тестирования сервиса рекомендаций*>
+После запуска вы увидете логи в файле test_service.log
